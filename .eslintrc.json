@@ -24,6 +24,12 @@
         "@typescript-eslint/consistent-type-imports": "error",
         "import/order": ["error", {"newlines-between": "always"}],
         "no-console": "warn",
-        "react/react-in-jsx-scope": "off"
+        "react/react-in-jsx-scope": "off",
+        "prettier/prettier": [
+          "error",
+          {
+            "endOfLine": "auto"
+          }
+        ]
     }
 }

@@ -1,14 +1,12 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import Script from 'next/script';
 
 export default function Document() {
   return (
     <Html>
       <Head />
-      <body>
+      <body className="bg-black text-white">
         <Main />
         <NextScript />
-        <Script src="https://cdn.tailwindcss.com" strategy="beforeInteractive" />
       </body>
     </Html>
   );

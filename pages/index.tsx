@@ -1,5 +1,7 @@
 import Head from 'next/head';
 
+import { Navbar } from '../components/Navbar/Navbar';
+
 export default function Home() {
   return (
     <div>
@@ -10,9 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="ml-20">
-          <h1 className="text-3xl font-bold underline mx-auto">Hello world!</h1>
-        </div>
+        <Navbar />
       </main>
     </div>
   );

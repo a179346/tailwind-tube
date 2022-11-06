@@ -21,7 +21,7 @@ export const Tooltip: React.FC<ITooltipProps> = ({ children, title }) => {
       {children}
       <span
         ref={tipRef}
-        className="w-auto rounded-md bg-gray-500 absolute p-2 mt-2 top-full text-xs invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-100"
+        className="w-auto rounded-md bg-gray-500 absolute p-2 mt-2 top-full text-xs invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-100"
       >
         {title}
       </span>

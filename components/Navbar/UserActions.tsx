@@ -9,12 +9,12 @@ import { UserAction } from './UserAction';
 export const UserActions: React.FC = () => {
   return (
     <div className="flex justify-end items-center">
-      <div className="mr-2">
+      <div className="sm:mr-2">
         <UserAction tooltip="Create">
           <AiOutlineVideoCameraAdd className="w-6 h-6" />
         </UserAction>
       </div>
-      <div className="mr-2">
+      <div className="sm:mr-2">
         <UserAction tooltip="Notifications">
           <IoIosNotificationsOutline className="w-6 h-6" />
         </UserAction>

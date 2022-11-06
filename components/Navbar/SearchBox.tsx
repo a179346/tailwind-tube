@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React, { useEffect, useRef, useState } from 'react';
 import { GoSearch } from 'react-icons/go';
 import { HiMicrophone } from 'react-icons/hi';
@@ -47,7 +48,12 @@ export const SearchBox: React.FC<ISearchBoxProps> = ({ isFocus, setIsFocus }) =>
 
   return (
     <>
-      <span className={`${isFocus ? 'flex' : 'hidden'} sm:flex grow shrink justify-center`}>
+      <span
+        className={clsx('sm:flex grow shrink justify-center', {
+          flex: isFocus,
+          hidden: !isFocus,
+        })}
+      >
         {isFocus && (
           <span className="flex sm:hidden">
             <UserAction tooltip="Back">
@@ -56,9 +62,10 @@ export const SearchBox: React.FC<ISearchBoxProps> = ({ isFocus, setIsFocus }) =>
           </span>
         )}
         <div
-          className={`max-w-xl pr-1 h-10 ${
-            isFocus ? 'border-blue-500 ml-4' : 'border-gray-700 pl-4'
-          } border rounded-l-3xl items-center flex grow shrink`}
+          className={clsx('max-w-xl pr-1 h-10 border rounded-l-3xl items-center flex grow shrink', {
+            'border-blue-500 ml-4': isFocus,
+            'border-gray-700 pl-4': !isFocus,
+          })}
         >
           {isFocus && (
             <div className="pl-2 w-12 flex justify-center">
@@ -98,7 +105,12 @@ export const SearchBox: React.FC<ISearchBoxProps> = ({ isFocus, setIsFocus }) =>
           </div>
         </Tooltip>
       </span>
-      <span className={`${isFocus ? 'hidden' : 'flex'} sm:hidden grow shrink justify-end`}>
+      <span
+        className={clsx('sm:hidden grow shrink justify-end', {
+          hidden: isFocus,
+          flex: !isFocus,
+        })}
+      >
         <div className="sm:mr-2">
           <UserAction tooltip="Search" onClick={focusOnSearch}>
             <GoSearch className="w-4 h-4" />

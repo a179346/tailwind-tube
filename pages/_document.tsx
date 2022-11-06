@@ -7,7 +7,7 @@ export default function Document() {
         <meta name="description" content="Twtube" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className="bg-black text-white">
+      <body className="font-roboto bg-black text-white">
         <Main />
         <NextScript />
       </body>

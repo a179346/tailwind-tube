@@ -7,10 +7,19 @@ module.exports = {
   ],
   theme: {
     fontSize: {
-      xs: "0.2rem"
+      xs: "0.1rem"
+    },
+    fontFamily: {
+      'roboto': ['Roboto', 'sans-serif'],
     },
     screens: {
-      sm: "657px"
+      sm: "657px",
+      md: "792px"
+    },
+    extend: {
+      spacing: {
+        18: '4.5rem',
+      },
     }
   },
   plugins: [
